@@ -1,2 +1,0 @@
-Printf.printf "test"
-
