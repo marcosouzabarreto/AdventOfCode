@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/AdventOfOCaml/META"
+  "_build/install/default/lib/AdventOfOCaml/dune-package"
+  "_build/install/default/lib/AdventOfOCaml/opam"
+]
+bin: [
+  "_build/install/default/bin/AdventOfOCaml"
+]
