@@ -21,18 +21,17 @@ let rec filter chars acc =
             else filter tl acc
 ;;
 
-
-let rec last_element_of_list str = 
+let rec last_char_of_string str = 
     let list = explode str in 
     match list with 
     | [] -> "" 
     | [x] -> String.of_char x
     | _ :: tl -> 
             let new_tail = String.of_char_list tl in 
-            last_element_of_list new_tail 
+            last_char_of_string new_tail 
 ;;
 
-let first_element_of_list str =
+let first_char_of_string str =
     let exploded = explode str in 
     match exploded with 
     | [] -> "" 
@@ -45,9 +44,9 @@ let filter_only_ints str =
     String.of_char_list filtered_list
 ;;    
 
-let concatenate_numbers str = 
-    let first_element = first_element_of_list str in 
-    let last_element = last_element_of_list str in 
+let get_trebuchet_value str = 
+    let first_element = first_char_of_string str in 
+    let last_element = last_char_of_string str in 
     String.concat ~sep:"" [first_element; last_element]
 ;;
 
@@ -56,9 +55,9 @@ let sum_all list =
     List.fold ~init:0 ~f:(+) numbered_list 
 
 let _ = 
-let input = read_lines "./lib/Day1/input.txt" in 
+    let input = read_lines "./lib/Day1/input.txt" in 
     let parsed_inputs = List.map ~f:filter_only_ints input in 
-    let concatenated_numbers = List.map ~f:concatenate_numbers parsed_inputs in
-    let all_summed = sum_all concatenated_numbers in
+    let trebuchet_value = List.map ~f:get_trebuchet_value parsed_inputs in
+    let all_summed = sum_all trebuchet_value in
     Printf.printf "Result = %i" all_summed 
 ;;

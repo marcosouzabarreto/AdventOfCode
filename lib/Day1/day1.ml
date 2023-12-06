@@ -54,7 +54,7 @@ let sum_all list =
     let numbered_list = List.map ~f: int_of_string list in
     List.fold ~init:0 ~f:(+) numbered_list 
 
-let part1 = 
+let _ = 
     let input = read_lines "./lib/Day1/input.txt" in 
     let parsed_inputs = List.map ~f:filter_only_ints input in 
     let trebuchet_value = List.map ~f:get_trebuchet_value parsed_inputs in

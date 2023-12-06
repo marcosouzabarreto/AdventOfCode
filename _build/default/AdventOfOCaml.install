@@ -6,4 +6,5 @@ lib: [
 bin: [
   "_build/install/default/bin/AdventOfOCaml"
   "_build/install/default/bin/day1"
+  "_build/install/default/bin/day2"
 ]

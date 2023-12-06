@@ -1,4 +1,4 @@
 (lang dune 3.12)
 (name AdventOfOCaml)
 (sections (lib .) (bin ../../bin))
-(files (lib (META dune-package opam)) (bin (AdventOfOCaml day1)))
+(files (lib (META dune-package opam)) (bin (AdventOfOCaml day1 day2)))
